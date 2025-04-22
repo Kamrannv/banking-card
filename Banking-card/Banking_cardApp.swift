@@ -11,7 +11,8 @@ import SwiftUI
 struct Banking_cardApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            HomeViewBuilder.build()
         }
+        
     }
 }
