@@ -37,7 +37,6 @@ jobs:
       run: |
         xcodebuild test \
            -scheme Banking-card \
-           -test-plan Banking-card \
            -sdk iphonesimulator \
            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
            -only-testing:Banking_cardTests \
@@ -48,7 +47,6 @@ jobs:
       run: |
         xcodebuild test \
          -scheme Banking-card \
-         -test-plan Banking-card \
          -sdk iphonesimulator \
          -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
          -only-testing:Banking_cardUITests \
