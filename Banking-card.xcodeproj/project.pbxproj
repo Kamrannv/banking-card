@@ -27,6 +27,11 @@
 		A8A494402DB689E7006C0625 /* Banking-card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Banking-card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A494502DB689E9006C0625 /* Banking-cardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Banking-cardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A8A4945A2DB689E9006C0625 /* Banking-cardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Banking-cardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A8A495962DB787A6006C0625 /* Banking-cardTests */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Banking-cardTests"; sourceTree = "<group>"; };
+		A8A495972DB787C8006C0625 /* Banking-card.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Banking-card.xctestplan"; path = "../Banking-card.xctestplan"; sourceTree = "<group>"; };
+		A8A495982DB787EA006C0625 /* Banking-cardUI.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Banking-cardUI.xctestplan"; path = "../Banking-cardUI.xctestplan"; sourceTree = "<group>"; };
+		A8A495992DB78828006C0625 /* Banking-cardUnitTests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Banking-cardUnitTests.xctestplan"; path = "../Banking-cardUnitTests.xctestplan"; sourceTree = "<group>"; };
+		A8A4959A2DB7882F006C0625 /* Banking-cardUITests.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Banking-cardUITests.xctestplan"; path = "../Banking-cardUITests.xctestplan"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -96,6 +101,11 @@
 		A8A494372DB689E7006C0625 = {
 			isa = PBXGroup;
 			children = (
+				A8A495992DB78828006C0625 /* Banking-cardUnitTests.xctestplan */,
+				A8A4959A2DB7882F006C0625 /* Banking-cardUITests.xctestplan */,
+				A8A495972DB787C8006C0625 /* Banking-card.xctestplan */,
+				A8A495982DB787EA006C0625 /* Banking-cardUI.xctestplan */,
+				A8A495962DB787A6006C0625 /* Banking-cardTests */,
 				A8A494422DB689E7006C0625 /* Banking-card */,
 				A8A494532DB689E9006C0625 /* Banking-cardTests */,
 				A8A4945D2DB689E9006C0625 /* Banking-cardUITests */,
