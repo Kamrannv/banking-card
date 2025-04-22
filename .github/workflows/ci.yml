@@ -33,21 +33,11 @@ jobs:
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
           clean build
 
-    - name: Run Unit Tests
+    - name: Run Unit & UI Tests
       run: |
         xcodebuild test \
            -scheme Banking-card \
            -sdk iphonesimulator \
            -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-           -only-testing:Banking_cardTests \
            -enableCodeCoverage YES \
            ONLY_ACTIVE_ARCH=NO
-
-    - name: Run UI Tests
-      run: |
-        xcodebuild test \
-         -scheme Banking-card \
-         -sdk iphonesimulator \
-         -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-         -only-testing:Banking_cardUITests \
-         -enableCodeCoverage YES
