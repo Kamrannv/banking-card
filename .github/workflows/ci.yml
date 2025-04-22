@@ -47,8 +47,10 @@ jobs:
           ONLY_ACTIVE_ARCH=YES
           
     - name: Run UI Tests
-     continue-on-error: true
-     if: ${{ github.event.inputs.run_ui_tests == 'true' }}
+    
+      continue-on-error: true
+     
+      if: ${{ github.event.inputs.run_ui_tests == 'true' }}
       run: |
         xcodebuild test \
           -scheme Banking-card \
