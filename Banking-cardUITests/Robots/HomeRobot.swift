@@ -33,7 +33,7 @@ struct HomeRobot {
     
         for char in gsm {
             gsmField.typeText(String(char))
-            RunLoop.current.run(until: Date().addingTimeInterval(0.1)) // slight delay
+            RunLoop.current.run(until: Date().addingTimeInterval(0.1))  
         }
 
         return self

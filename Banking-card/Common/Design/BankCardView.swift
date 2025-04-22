@@ -49,6 +49,7 @@ struct BankCardView: View {
                 Spacer(minLength: 0)
                 
                 HStack {
+                    //MARK: added default expire date for all cards
                     Text("Expiry: 12/28")
                         .foregroundColor(.white.opacity(0.8))
                         .font(.caption)

@@ -30,21 +30,4 @@ open class Container<S: UIState, I: UIIntent, R>: ObservableObject {
         viewModel.send(event)
     }
 }
-extension Container {
-    func binding<Value>(_ keyPath: WritableKeyPath<S, Value>) -> Binding<Value> {
-        Binding(
-            get: { self.state[keyPath: keyPath] },
-            set: { newValue in
-                self.state[keyPath: keyPath] = newValue
-                self.objectWillChange.send()
-            }
-        )
-    }
-}
 
-
-//extension Container where S == HomeState, I == HomeEvent, R == Never {
-//    func setSwiftDataContext(_ context: ModelContext) {
-//        (viewModel as? HomeViewModel)?.setContext(context)
-//    }
-//}
