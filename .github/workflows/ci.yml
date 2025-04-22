@@ -39,9 +39,9 @@ jobs:
       run: |
         xcodebuild test \
           -scheme Banking-card \
+          -testPlan Banking-cardUnitTests \
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-          -testPlan Banking-cardUnitTests \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
           ONLY_ACTIVE_ARCH=YES
@@ -54,9 +54,9 @@ jobs:
       run: |
         xcodebuild test \
           -scheme Banking-card \
+          -testPlan Banking-cardUITests \
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
-          -testPlan Banking-cardUITests \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
           ONLY_ACTIVE_ARCH=YES
