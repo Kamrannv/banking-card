@@ -1,0 +1,52 @@
+name: iOS Banking App
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-test:
+    name: Build, Unit Test, and UI Test
+    runs-on: macos-latest
+    timeout-minutes: 30
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Xcode
+      uses: maxim-lobanov/setup-xcode@v1
+      with:
+        xcode-version: latest
+
+    - name: Install dependencies (if needed)
+      run: |
+        xcodebuild -resolvePackageDependencies -project Banking-card.xcodeproj
+
+    - name: Build app
+      run: |
+        xcodebuild \
+          -scheme Banking-card \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+          clean build
+
+    - name: Run Unit Tests
+      run: |
+        xcodebuild test \
+          -scheme Banking-card \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+          -enableCodeCoverage YES \
+          ONLY_ACTIVE_ARCH=NO
+
+    - name: Run UI Tests
+      run: |
+        xcodebuild test \
+          -scheme Banking-card \
+          -sdk iphonesimulator \
+          -destination 'platform=iOS Simulator,name=iPhone 14,OS=latest' \
+          -enableCodeCoverage YES \
+          -only-testing:Banking_cardUITests
