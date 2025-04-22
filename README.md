@@ -16,9 +16,9 @@ SwiftUI app simulating a simple banking card system. Users can create customers,
 - **Clean Architecture**
 - **MVI Pattern**: State, Event, ViewModel, View
 
-## ✅ Testing
+## Testing
 
-- **Unit Tests**: via `swift test`
+- **Unit Tests**: via `Swift Testing`
 - **UI Tests**:
   - Page Object Pattern (AppRobot)
   
