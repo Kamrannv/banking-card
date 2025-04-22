@@ -26,9 +26,5 @@ open class BaseViewModel<S: UIState, I: UIIntent, R>: ObservableObject {
         update(&state)
     
     }
- 
-    public func handleError(_ error: Error) {
-        let message = error.localizedDescription
-         // ErrorToastManager.shared.show(message)
-       }
+
 }
