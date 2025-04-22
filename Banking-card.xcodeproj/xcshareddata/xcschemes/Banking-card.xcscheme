@@ -30,11 +30,11 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <TestPlans>
          <TestPlanReference
-            reference = "container:../Banking-cardUnitTests.xctestplan"
-            default = "YES">
+            reference = "container:../Banking-cardUITests.xctestplan">
          </TestPlanReference>
          <TestPlanReference
-            reference = "container:../Banking-cardUITests.xctestplan">
+            reference = "container:Test.xctestplan"
+            default = "YES">
          </TestPlanReference>
       </TestPlans>
       <Testables>

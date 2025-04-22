@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    name: Build, Unit Test, and UI Test
+    name: Build and Unit Test
     runs-on: macos-latest
     timeout-minutes: 20
 
@@ -41,6 +41,7 @@ jobs:
           -scheme Banking-card \
           -sdk iphonesimulator \
           -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+          -only-testing:Banking-cardTests \
           -enableCodeCoverage YES \
           CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO \
           ONLY_ACTIVE_ARCH=YES

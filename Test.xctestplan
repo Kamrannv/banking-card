@@ -1,0 +1,24 @@
+{
+  "configurations" : [
+    {
+      "id" : "9763BDAA-6118-4532-AD84-0D0F0CF5B587",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:Banking-card.xcodeproj",
+        "identifier" : "A8A4944F2DB689E9006C0625",
+        "name" : "Banking-cardTests"
+      }
+    }
+  ],
+  "version" : 1
+}
