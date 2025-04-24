@@ -11,7 +11,6 @@ final class HomeViewModel: BaseViewModel<HomeViewState, HomeViewEvent, Never> {
     private let createCard: CreateCardUseCase
     private let transfer: TransferUseCase
     private let remove: RemoveCardUseCase
-    
     init(
         state: HomeViewState,
         createUser: CreateUserUseCase,
@@ -95,10 +94,13 @@ final class HomeViewModel: BaseViewModel<HomeViewState, HomeViewEvent, Never> {
     }
     
     private func resetState() {
-        state.name = ""
-        state.surname = ""
-        state.gsm = ""
-        state.birthDate = Date()
+        update {
+            $0.name = ""
+            $0.surname = ""
+            $0.gsm = ""
+            $0.birthDate = Date()
+        }
+       
     }
     
     private func createCard(for userId: UUID, number: String) {
