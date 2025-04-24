@@ -20,7 +20,6 @@ class HomeViewState: UIState {
     @Published var isGsmValid: Bool = false
     
     @Published var newCardNumber = ""
-
     
      func setError(_ message: String?) {
         self.errorMessage = message
